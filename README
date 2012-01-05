@@ -1,0 +1,10 @@
+This is a CodeIgniter application located at http://stats.arsenalist.com.
+
+The app displays past football league tables based on a date.  It can also
+visualize the league's title races in a chart.  This happens by utilizing the
+Google Charts API (I really do need to cache those calls, and not generate them every time).
+
+The data is read from http://www.football-data.co.uk using a cron process, which is
+located in the 'cron' directory.  
+
+
