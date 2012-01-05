@@ -1,0 +1,158 @@
+-- MySQL dump 10.13  Distrib 5.1.60, for unknown-linux-gnu (x86_64)
+--
+-- Host: localhost    Database: raptorsr_arsenaliststats
+-- ------------------------------------------------------
+-- Server version	5.1.60-community-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `leagues`
+--
+
+DROP TABLE IF EXISTS `leagues`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `leagues` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) DEFAULT NULL,
+  `tier` varchar(45) DEFAULT NULL,
+  `season` varchar(45) DEFAULT NULL,
+  `code` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `stats`
+--
+
+DROP TABLE IF EXISTS `stats`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `stats` (
+  `Div` varchar(50) DEFAULT NULL,
+  `Date` varchar(50) DEFAULT NULL,
+  `HomeTeam` varchar(50) DEFAULT NULL,
+  `AwayTeam` varchar(50) DEFAULT NULL,
+  `FTHG` varchar(50) DEFAULT NULL,
+  `FTAG` varchar(50) DEFAULT NULL,
+  `FTR` varchar(50) DEFAULT NULL,
+  `HTHG` varchar(50) DEFAULT NULL,
+  `HTAG` varchar(50) DEFAULT NULL,
+  `HTR` varchar(50) DEFAULT NULL,
+  `Attendance` varchar(50) DEFAULT NULL,
+  `Referee` varchar(50) DEFAULT NULL,
+  `HS` varchar(50) DEFAULT NULL,
+  `AS` varchar(50) DEFAULT NULL,
+  `HST` varchar(50) DEFAULT NULL,
+  `AST` varchar(50) DEFAULT NULL,
+  `HHW` varchar(50) DEFAULT NULL,
+  `AHW` varchar(50) DEFAULT NULL,
+  `HC` varchar(50) DEFAULT NULL,
+  `AC` varchar(50) DEFAULT NULL,
+  `HF` varchar(50) DEFAULT NULL,
+  `AF` varchar(50) DEFAULT NULL,
+  `HO` varchar(50) DEFAULT NULL,
+  `AO` varchar(50) DEFAULT NULL,
+  `HY` varchar(50) DEFAULT NULL,
+  `AY` varchar(50) DEFAULT NULL,
+  `HR` varchar(50) DEFAULT NULL,
+  `AR` varchar(50) DEFAULT NULL,
+  `HBP` varchar(50) DEFAULT NULL,
+  `ABP` varchar(50) DEFAULT NULL,
+  `B365H` varchar(50) DEFAULT NULL,
+  `B365D` varchar(50) DEFAULT NULL,
+  `B365A` varchar(50) DEFAULT NULL,
+  `BSH` varchar(50) DEFAULT NULL,
+  `BSD` varchar(50) DEFAULT NULL,
+  `BSA` varchar(50) DEFAULT NULL,
+  `BWH` varchar(50) DEFAULT NULL,
+  `BWD` varchar(50) DEFAULT NULL,
+  `BWA` varchar(50) DEFAULT NULL,
+  `GBH` varchar(50) DEFAULT NULL,
+  `GBD` varchar(50) DEFAULT NULL,
+  `GBA` varchar(50) DEFAULT NULL,
+  `IWH` varchar(50) DEFAULT NULL,
+  `IWD` varchar(50) DEFAULT NULL,
+  `IWA` varchar(50) DEFAULT NULL,
+  `LBH` varchar(50) DEFAULT NULL,
+  `LBD` varchar(50) DEFAULT NULL,
+  `LBA` varchar(50) DEFAULT NULL,
+  `SOH` varchar(50) DEFAULT NULL,
+  `SOD` varchar(50) DEFAULT NULL,
+  `SOA` varchar(50) DEFAULT NULL,
+  `SBH` varchar(50) DEFAULT NULL,
+  `SBD` varchar(50) DEFAULT NULL,
+  `SBA` varchar(50) DEFAULT NULL,
+  `SJH` varchar(50) DEFAULT NULL,
+  `SJD` varchar(50) DEFAULT NULL,
+  `SJA` varchar(50) DEFAULT NULL,
+  `SYH` varchar(50) DEFAULT NULL,
+  `SYD` varchar(50) DEFAULT NULL,
+  `SYA` varchar(50) DEFAULT NULL,
+  `VCH` varchar(50) DEFAULT NULL,
+  `VCD` varchar(50) DEFAULT NULL,
+  `VCA` varchar(50) DEFAULT NULL,
+  `WHH` varchar(50) DEFAULT NULL,
+  `WHD` varchar(50) DEFAULT NULL,
+  `WHA` varchar(50) DEFAULT NULL,
+  `Bb1X2` varchar(50) DEFAULT NULL,
+  `BbMxH` varchar(50) DEFAULT NULL,
+  `BbAvH` varchar(50) DEFAULT NULL,
+  `BbMxD` varchar(50) DEFAULT NULL,
+  `BbAvD` varchar(50) DEFAULT NULL,
+  `BbMxA` varchar(50) DEFAULT NULL,
+  `BbAvA` varchar(50) DEFAULT NULL,
+  `BbOU` varchar(50) DEFAULT NULL,
+  `BbMx>2.5` varchar(50) DEFAULT NULL,
+  `BbAv>2.5` varchar(50) DEFAULT NULL,
+  `BbMx<2.5` varchar(50) DEFAULT NULL,
+  `BbAv<2.5` varchar(50) DEFAULT NULL,
+  `GB>2.5` varchar(50) DEFAULT NULL,
+  `GB<2.5` varchar(50) DEFAULT NULL,
+  `B365>2.5` varchar(50) DEFAULT NULL,
+  `B365<2.5` varchar(50) DEFAULT NULL,
+  `BbAH` varchar(50) DEFAULT NULL,
+  `BbAHh` varchar(50) DEFAULT NULL,
+  `BbMxAHH` varchar(50) DEFAULT NULL,
+  `BbAvAHH` varchar(50) DEFAULT NULL,
+  `BbMxAHA` varchar(50) DEFAULT NULL,
+  `BbAvAHA` varchar(50) DEFAULT NULL,
+  `GBAHH` varchar(50) DEFAULT NULL,
+  `GBAHA` varchar(50) DEFAULT NULL,
+  `GBAH` varchar(50) DEFAULT NULL,
+  `LBAHH` varchar(50) DEFAULT NULL,
+  `LBAHA` varchar(50) DEFAULT NULL,
+  `LBAH` varchar(50) DEFAULT NULL,
+  `B365AHH` varchar(50) DEFAULT NULL,
+  `B365AHA` varchar(50) DEFAULT NULL,
+  `B365AH` varchar(50) DEFAULT NULL,
+  `Season` varchar(50) DEFAULT NULL,
+  `ID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`ID`),
+  KEY `hometeamindex` (`HomeTeam`),
+  KEY `awayteamindex` (`AwayTeam`),
+  KEY `seasonindex` (`Season`)
+) ENGINE=InnoDB AUTO_INCREMENT=1054364 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2012-01-05  7:51:07
